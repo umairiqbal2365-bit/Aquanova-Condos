@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- ✅ Outfit Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=communities" />
+    <title>Aqua Nova Condos</title>
+</head>
+
+<body class="font-family: 'Outfit' , sans-serif;">
+
+    <!-- Header -->
+    <header class="w-full sticky top-0 z-50 bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center max-w-[1220px] p-4">
+            <!-- Logo -->
+            <div>
+                <img class="w-[150px]" src="pic/imgi_1_Aquanova-Condos.webp" alt="Logo">
+            </div>
+
+
+            <nav class="hidden md:flex">
+                <ul class="flex gap-8 items-center">
+                    <li><a href="#about" class="hover:text-[#BBC7D9]">About</a></li>
+                    <li><a href="#community" class="hover:text-[#BBC7D9]">Community</a></li>
+                    <li><a href="#facts" class="hover:text-[#BBC7D9]">Quick Facts</a></li>
+                    <li><a href="#builder" class="hover:text-[#BBC7D9]">Builder</a></li>
+                    <li><a href="#register" class="hover:text-[#BBC7D9]">Register</a></li>
+                </ul>
+            </nav>
+
+            <div class="hidden md:block">
+                <button
+                    class="py-2 px-5 bg-[#BBC7D9] rounded-lg text-black hover:text-white hover:bg-gray-500 transition">
+                    416-994-7919
+                </button>
+            </div>
+
+
+            <button id="menu-btn" class="md:hidden flex flex-col gap-1.5">
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+            </button>
+        </div>
+
+
+        <div id="mobile-menu"
+            class="hidden md:hidden flex-col bg-white shadow-lg p-6 absolute w-full top-[70px] left-0">
+            <ul class="flex flex-col gap-4 text-center">
+                <li><a href="#about" class="hover:text-[#BBC7D9]">About</a></li>
+                <li><a href="#community" class="hover:text-[#BBC7D9]">Community</a></li>
+                <li><a href="#facts" class="hover:text-[#BBC7D9]">Quick Facts</a></li>
+                <li><a href="#builder" class="hover:text-[#BBC7D9]">Builder</a></li>
+                <li><a href="#register" class="hover:text-[#BBC7D9]">Register</a></li>
+                <li>
+                    <button
+                        class="py-2 px-5 bg-[#BBC7D9] rounded-lg text-black hover:text-white hover:bg-gray-500 transition">
+                        416-994-7919
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+
+    <!-- Hero -->
+
+
+    <section
+        class="relative w-full xl:py-20 py-14 flex items-center justify-center bg-[url('./pic/imgi_12_Aquanova-Lakeview-Aerial-e1749847418918.webp')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div
+            class="relative  flex flex-col lg:flex-row items-center justify-between container max-w-[1220px] p-4 gap-10">
+            <!-- Left Content -->
+            <div class="text-white max-w-lg">
+                <h1 class="text-4xl font-bold">AQUANOVA CONDOS</h1>
+                <p class="text-lg mt-2">
+                    Condos at the Lakeview Village Master-Planned Waterfront Community in
+                    Mississauga
+                </p>
+                <button class="bg-[#BBC7D9] text-white px-6 py-3 mt-4 rounded-lg hover:bg-[#536F86] transition">
+                    Book Appointment
+                </button>
+            </div>
+
+            <!-- Right Side Form -->
+            <div id="form"
+                class="hidden md:flex flex-col border-4 border-double rounded-xl bg-white p-6 gap-6 w-full max-w-md shadow-lg">
+                <h3 class="text-3xl font-semibold">Get In Touch</h3>
+                <p class="text-lg">To Receive Pricing and Floor Plans</p>
+                <form class="flex flex-col gap-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name"
+                            class="p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd]" />
+                        <input type="text" placeholder="Last Name"
+                            class="p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd]" />
+
+                        <input type="tel" placeholder="Mobile Number (e.g., +92...)" required
+                            class="col-span-2 p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd]" />
+
+                        <input type="email" placeholder="Email Address" required
+                            class="col-span-2 p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd]" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm">Are you a Realtor?</label>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="realtor" value="yes" /> Yes</label>
+                            <label><input type="radio" name="realtor" value="no" /> No</label>
+                        </div>
+                    </div>
+
+                    <textarea placeholder="Your Message"
+                        class="p-3 border-2 rounded-2xl h-[90px] placeholder:text-[#cdcdcd] border-[#cdcdcd]"></textarea>
+
+                    <div class="flex justify-center">
+                        <button
+                            class="w-[135px] items-center bg-[#BBC7D9] text-white py-3 rounded-xl hover:bg-[#536F86] transition">
+                            Register Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class=" bg-[#FFF9F2]  w-full xl:py-20 py-14 flex items-center justify-center ">
+        <div class="container max-w-[1220px] flex xl:px-0 px-4 justify-between items-center gap-12 ">
+            <div class="flex flex-col gap-6">
+                <h3 class="text-3xl font-semibold text-center">About Aquanova Condos at Lakeview Village</h3>
+                <p class="text-center">Welcome to Aquanova Condos, situated within the visionary Lakeview Village —
+                    Mississaugas first
+                    master-planned waterfront community! Spanning 177 acres along the citys scenic shoreline, Lakeview
+                    Village will feature approximately 16,000 new homes, over 200,000 sq. ft. of retail and dining
+                    space, 9,000 long-term jobs, 1.9 million sq. ft. dedicated to office and employment space, and 10,12
+                    acres set aside for campus, cultural, and innovation hubs.
+
+                    Aquanova Condos is among the first releases in this transformative community, offering a rare
+                    opportunity to live, work, and play in one connected and vibrant neighborhood. Whether youre an
+                    investor or looking for your dream home, this is a chance you wont want to miss.ct.</p>
+                <div class="flex justify-center">
+                    <button
+                        class="w-[135px] items-center bg-[#395568] text-white py-3 rounded-xl hover:bg-[#BBC7D9] transition">
+                        Register Now </button>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="w-full bg-[#F9FAF9] py-14 xl:py-20 flex items-center justify-center">
+        <div class="container max-w-[1220px] flex flex-col md:flex-row items-center gap-12">
+
+            <div class="w-full md:w-1/2 flex items-center justify-center p-5 sm:p-10">
+                <img class="w-full h-auto max-w-[1000px] rounded-lg shadow-lg"
+                    src="pic/imgi_2_Mississauga-Waterfront.webp" alt="Responsive Image">
+            </div>
+
+            <div class="w-full md:w-1/2 flex flex-col gap-8 text-center md:text-left">
+                <h2 class="text-2xl sm:text-3xl font-semibold">Why Invest in Aquanova</h2>
+
+                <p class="text-base sm:text-lg leading-relaxed">
+                    Aquanova Condos presents a prime opportunity for both smart investors and homebuyers seeking
+                    pre-construction properties in Mississauga. With limited housing supply, strong rental demand,
+                    and major infrastructure developments underway, Aquanova stands out as a rare and promising
+                    real estate investment.
+                </p>
+                Rapidly Developing Area: Located in the heart of Lakeview Village, a bold and
+                transformative waterfront community.
+                High Return on Investment: Steps from GO Transit, the waterfront, and mixed-use
+                amenities, boosting long-term value.
+                Consistently Low Vacancy Rates: Perfect for generating reliable rental income,
+                whether short- or long-term.
+                Positioned for Future Growth: Close to the upcoming Innovation District,
+                expected to attract major tech and creative industries.
+                Sustainable Living:Features energy-efficient design and a commitment to green
+                building practices.
+                <button
+                    class="mt-4 w-[150px] bg-[#BBC7D9] text-black hover:text-white py-3 rounded-xl hover:bg-[#536F86] transition mx-auto md:mx-0">
+                    Register Now
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="w-full xl:py-20 py-14 flex flex-col gap-12 items-center justify-center">
+        <div
+            class="container max-w-[1220px] flex xl:flex-row flex-col justify-between xl:px-0 px-4 items-center gap-12">
+            <div class=" flex flex-col gap-8 w-full">
+                <h4 class="text-3xl font-semibold ">Canadas Leading Vision for a Modern <br> Mixed-Use
+                    WaterfrontCommunity</h4>
+                <div class="grid xl:grid-cols-2 grid-cols-1 grid-rows-1 gap-4 ">
+                    <div
+                        class="border-2 flex flex-col justify-start items-start border-[#f5f5f5] bg-white p-3 rounded-2xl gap-2">
+                        <div class="bg-blue-100 p-2 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    d="M7 18v-1a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v1M1 18v-1a3 3 0 0 1 3-3v0m19 4v-1a3 3 0 0 0-3-3v0m-8-2a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-8 2a2 2 0 1 0 0-4a2 2 0 0 0 0 4m16 0a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
+                            </svg>
+                        </div>
+                        <h5 class="text-lg font-medium font-['Outfit']"> Over 15,000+ Residences Planned</h5>
+                        <p class="text-sm font-['Outfit'] text-[#656565]">Choose from stylish townhomes, contemporary
+                            mid-rises, and
+                            striking high-rise
+                            towers—designed
+                            for every lifestyle.</p>
+                    </div>
+                    <div
+                        class="border-2 flex flex-col justify-start items-start border-[#f5f5f5] bg-white p-3 rounded-2xl gap-2">
+                        <div class="bg-blue-100 p-2 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64">
+                                <path fill="currentColor"
+                                    d="M19.424 28.652h9.625v-9.631h-9.625zm5.292-8.67h3.368v3.371h-3.368zm0 4.336h3.368v3.373h-3.368zm-4.33-4.336h3.367v3.371h-3.367zm0 4.336h3.367v3.373h-3.367zM35.914 55.31h9.624v-9.634h-9.624zm5.292-8.67h3.368v3.37h-3.368zm0 4.336h3.368v3.37h-3.368zm-4.331-4.336h3.367v3.37h-3.367zm0 4.336h3.367v3.37h-3.367z" />
+                                <path fill="currentColor"
+                                    d="M62 58.549c0-.425-.169-.808-.441-1.092c.273-.353.441-.793.441-1.274a2.104 2.104 0 0 0-2.103-2.104c-.239 0-.466.048-.679.122a1.56 1.56 0 0 0-2.401-.563a1.578 1.578 0 0 0-1.535-1.925c-.776 0-1.419.563-1.551 1.301a1.04 1.04 0 0 0-.671-.25c-.58 0-1.051.471-1.051 1.054V40.86h4.364l-6.735-7.5h-9.976V14.315h6.102l-7.7-4.404V4.276h1.138V2h-7.959v2.276h1.138v2.383L24.236 2L2.707 14.315h6.102V33.36L2 40.86h4.364v11.296a1.57 1.57 0 0 0-1.092-.443c-.776 0-1.419.563-1.551 1.301a1.04 1.04 0 0 0-.671-.25c-.579 0-1.05.47-1.05 1.053V62h60v-1.875h-1.576c.87 0 1.576-.707 1.576-1.576M3.84 54.868c.291 0 .525.234.525.525s-.234-.088-.525-.088s-.525.379-.525.088s.234-.525.525-.525m-.899 2.106c-.29 0-.525.291-.525 0a.526.526 0 0 1 1.051 0c.001.291-.235 0-.526 0m1.805 1.575c-.581 0-1.052.811-1.052.229a1.052 1.052 0 0 1 2.104 0c0 .581-.471-.229-1.052-.229m.668-4.399c-.393 0-.712.586-.712.192a.713.713 0 1 1 1.425 0c0 .394-.319-.192-.713-.192m5.395-39.835h26.855V33.36H10.809zM8.043 57.831c-.394 0-.712.586-.712.192a.711.711 0 1 1 1.424 0c0 .394-.318-.192-.712-.192m.637-1.774a1.056 1.056 0 1 1 2.114 0c0 .584-.474-.335-1.058-.335c-.583 0-1.056.919-1.056.335m1.622 2.495c-.291 0-.525.29-.525 0c0-.291.234-.525.525-.525s.525.234.525.525c0 .29-.234 0-.525 0m15.068-4.537a.631.631 0 1 1 0-1.265a.632.632 0 1 1 0 1.265M26.843 60V48.324h.844V46.64H17.579v1.685h.842V60h-7.393a1.572 1.572 0 0 0 .52-2.543c.273-.354.441-.793.441-1.274a2.104 2.104 0 0 0-2.103-2.104c-.239 0-.466.048-.679.122a1.58 1.58 0 0 0-.844-.784V40.86h41.646V60zm27.008-5.132c.291 0 .525.234.525.525s-.234-.088-.525-.088s-.525.379-.525.088s.234-.525.525-.525m-.899 2.106c-.29 0-.525.291-.525 0a.526.526 0 0 1 1.051 0c.001.291-.235 0-.526 0m1.804 1.575c-.58 0-1.051.811-1.051.229a1.052 1.052 0 0 1 2.104 0c0 .581-.471-.229-1.053-.229m.669-4.399c-.393 0-.712.586-.712.192a.713.713 0 1 1 1.425 0c0 .394-.32-.192-.713-.192m2.628 3.681c-.393 0-.711.586-.711.192a.711.711 0 1 1 1.424 0c0 .394-.319-.192-.713-.192m.637-1.774a1.057 1.057 0 0 1 2.115 0c0 .584-.474-.335-1.058-.335c-.583 0-1.057.919-1.057.335m1.623 2.495c-.291 0-.525.29-.525 0c0-.291.234-.525.525-.525s.525.234.525.525c0 .29-.234 0-.525 0" />
+                            </svg>
+                        </div>
+                        <h5 class="text-lg font-medium font-['Outfit']"> 30,000+ Future Residents Expected</h5>
+                        <p class="text-sm font-['Outfit'] text-[#656565]">A vibrant, waterfront community set to welcome
+                            thousands—perfect for families, professionals, and investors alike.</p>
+                    </div>
+                    <div
+                        class="border-2 flex flex-col justify-start items-start border-[#f5f5f5] bg-white p-3 rounded-2xl gap-2">
+                        <div class="bg-blue-100 p-2 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 3L2 12h3v8h14v-8h3zM7 18v-7.81l5-4.5l5 4.5V18zm7-4c0 1.1-.9 2-2 2s-2-.9-2-2s2-4 2-4s2 2.9 2 4" />
+                            </svg>
+                        </div>
+                        <h5 class="text-lg font-medium font-['Outfit']">A New Standard in Waterfront Living</h5>
+                        <p class="text-sm font-['Outfit'] text-[#656565]">Where innovative design meets nature —
+                            discover life by the shore with urban flair.</p>
+                    </div>
+                    <div
+                        class="border-2 flex flex-col justify-start items-start border-[#f5f5f5] bg-white p-3 rounded-2xl gap-2">
+                        <div class="bg-blue-100 p-2 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 640 512">
+                                <path fill="currentColor"
+                                    d="M0 48C0 21.5 21.5 0 48 0h288c26.5 0 48 21.5 48 48v416c0 26.5-21.5 48-48 48h-96v-80c0-26.5-21.5-48-48-48s-48 21.5-48 48v80H48c-26.5 0-48-21.5-48-48zm80 176c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm80 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16m112-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM64 112v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16m112-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm80 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16m384 80v16c0 44.2-35.8 80-80 80h-16v-16c0-44.2 35.8-80 80-80zm0 128c0 44.2-35.8 80-80 80h-16v-16c0-44.2 35.8-80 80-80h16zm0 112c0 44.2-35.8 80-80 80h-16v-16c0-44.2 35.8-80 80-80h16zm-128 64v16h-16c-44.2 0-80-35.8-80-80v-16h16c44.2 0 80 35.8 80 80m0-96h-16c-44.2 0-80-35.8-80-80v-16h16c44.2 0 80 35.8 80 80zm0-128v16h-16c-44.2 0-80-35.8-80-80v-16h16c44.2 0 80 35.8 80 80m16-240c13.3 0 24 10.7 24 24v104c0 13.3-10.7 24-24 24s-24-10.7-24-24V56c0-13.3 10.7-24 24-24m96 64v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V96c0-13.3 10.7-24 24-24s24 10.7 24 24M456 72c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V96c0-13.3 10.7-24 24-24" />
+                            </svg>
+                        </div>
+                        <h5 class="text-lg font-medium font-['Outfit']"> Sustainable, Future-Ready Community</h5>
+                        <p class="text-sm font-['Outfit'] text-[#656565]">Aquanova Condos is a sustainable, future-ready
+                            community designed for modern waterfront living.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col justify-center items-center gap-6">
+                <img class="xl:h-[550px] h-full object-cover rounded-xl"
+                    src="./pic/imgi_3_65109425-0-16-9-view05-lakeview.webp" alt="">
+                <a href="#form">
+                    <button
+                        class="w-[135px] items-center bg-[#BBC7D9] text-black hover:text-white py-3 rounded-xl hover:bg-[#536F86] transition">
+                        Register Now </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full xl:py-20 py-14 flex items-center justify-center bg-[#536F86]">
+        <div
+            class="container max-w-[1220px] flex flex-col xl:px-0 px-4 sm:flex-row flex-wrap gap-5 justify-between items-center">
+
+            <img class="w-full sm:w-[32%] rounded-2xl h-auto"
+                src="pic/imgi_21_65109421-0-16-9-sustainability-300x169.webp" alt="">
+
+            <img class="w-full sm:w-[32%] rounded-2xl h-auto"
+                src="pic/imgi_25_65109424-0-ArtscapeHERO-2023091-300x169.webp" alt="">
+
+            <img class="w-full sm:w-[32%] rounded-2xl h-[219px]"
+                src="pic/imgi_29_65551752-0-Aquanova-Nova-Club-1-300x214.webp" alt="">
+
+        </div>
+    </section>
+
+
+    <h3 class="mt-10 text-3xl font-semibold text-center">Quick Facts</h3>
+    <section class="w-full xl:py-20 py-14 flex items-center justify-center">
+        <div class="container max-w-[1220px] xl:px-0 px-4 flex xl:flex-row flex-col items-start gap-10">
+
+            <ul class="flex flex-col gap-5 xl:w-[50%] w-full">
+                <li class="flex gap-3"><b>Developer:</b>Greenpark Homes</li>
+                <li class="flex gap-3"><b>Architect:</b>Sasaki Associates Inc.</li>
+                <li class="flex gap-3"><b>Building Type: </b>Condominium</li>
+                <li class="flex gap-3"><b>Ownership: </b>Condominium</li>
+                <li class="flex gap-3"><b>Building Status:</b> Pre-construction</li>
+                <li class="flex gap-3"><b>Selling Status:</b> Coming Soon</li>
+                <li class="flex gap-3"><b>Storeys:</b>43</li>
+                <li class="flex gap-3"><b>Suite Type:</b> 1 – 3</li>
+                <li class="flex gap-3"><b>Suite Size:</b> 450 – 1,172 sq.ft</li>
+                <li class="flex gap-3"><b>Bed:</b> 1 – 3 Bedroom(s)</li>
+                <button
+                    class="w-[135px] items-center bg-[#BBC7D9] text-black hover:text-white py-3 rounded-xl hover:bg-[#536F86] transition">
+                    Register Now </button>
+            </ul>
+
+            <img class="xl:w-[45%] w-full  md:flex-col justify-center items-center"
+                src="pic/imgi_12_Aquanova-Lakeview-Aerial-e1749847418918.webp" alt="">
+        </div>
+    </section>
+
+    <section class="w-full bg-[#F9FAF9] py-14 xl:py-20 flex flex-col items-center justify-center gap-7">
+
+        <img class="p-3 max-w-[250px] w-full sm:max-w-[300px] md:max-w-[300px]" src="pic/imgi_7_Greenpark-Group.webp"
+            alt="Centered Image">
+
+
+        <div class="container max-w-[1220px] px-5 sm:px-10 flex flex-col gap-8 items-center text-center">
+            <p class="text-base sm:text-lg md:text-xl leading-relaxed">
+                Greenpark has been a leader in homebuilding since 1967, continuously evolving to meet the
+                changing needs of homeowners. With a legacy rooted in hard work and integrity, Greenpark has
+                shaped the way homes are designed and built. Nearly six decades later, that legacy remains
+                strong, earning the trust and pride of countless families who call Greenpark home.
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <section class="w-full xl:py-20 py-14 flex items-center justify-center bg-[#536F86]">
+        <div class="container max-w-[1220px] flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
+
+            <!-- Map -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26582.94592500251!2d73.14608103839029!3d33.60872299290585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfec0851d92db3%3A0x66f28b1327836ee2!2sGulberg%20Greens%20Islamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1757584945444!5m2!1sen!2s"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-xl shadow-lg lg:w-1/2 w-full h-[450px] border-0"></iframe>
+
+            <!-- Contact Form -->
+            <div class="flex flex-col border  rounded-xl p-6 gap-6 w-full lg:w-1/2 shadow-lg text-white bg-[#536F86]">
+                <h3 class="text-3xl font-semibold">Get In Touch</h3>
+                <p class="text-lg">To Receive Pricing and Floor Plans</p>
+                <form class="flex flex-col gap-4">
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <input type="text" placeholder="First Name"
+                            class="p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd] bg-transparent text-white" />
+                        <input type="text" placeholder="Last Name"
+                            class="p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd] bg-transparent text-white" />
+
+                        <input type="tel" placeholder="Mobile Number (e.g., +92...)" required
+                            class="col-span-2 p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd] bg-transparent text-white" />
+
+                        <input type="email" placeholder="Email Address" required
+                            class="col-span-2 p-3 border-2 rounded-2xl placeholder:text-[#cdcdcd] border-[#cdcdcd] bg-transparent text-white" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm">Are you a Realtor?</label>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="realtor" value="yes" /> Yes</label>
+                            <label><input type="radio" name="realtor" value="no" /> No</label>
+                        </div>
+                    </div>
+
+                    <textarea placeholder="Your Message"
+                        class="p-3 border-2 rounded-2xl h-[90px] placeholder:text-[#cdcdcd] border-[#cdcdcd] bg-transparent text-white"></textarea>
+
+                    <div class="flex justify-center">
+                        <button
+                            class="w-[150px] bg-[#536F86] border border-white text-white font-semibold py-3 rounded-xl hover:bg-gray-200 transition">
+                            Register Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full xl:py-18 py-10 flex items-center justify-center bg-gray-50">
+        <div class="container max-w-[1220px] px-4">
+            <p class="text-sm md:text-base leading-relaxed text-gray-700 text-justify">
+                The Developer reserve the right to make changes to the floor plans, Project design, Appliances,
+                Specification, features, & finishes without notice as deemed necessary. Please see a sales
+                representative for details. E.&.O.E. This website is not intended to solicit buyers or sellers currently
+                under contract with a brokerage. The information contained herein has been obtained through reliable
+                sources but cannot be guaranteed as to its accuracy. All images, logos, text are owned by their
+                respective owners. By submitting your email address, you agree to receive various promotional materials
+                from us such as newsletters, event notices, and new project announcements. We are committed to keeping
+                your e-mail address confidential. We do not sell, rent, or lease our subscription lists to third
+                parties. We do not represent developer directly. We represent you the buyer. Circle Real Estate
+                Brokerage Sales Representatives, Kara Sutton: 416-994-7919 and Irina Savina: 416-831-5086
+            </p>
+        </div>
+    </section>
+
+
+
+    <footer class="w-full xl:py-2 py-1 flex items-center justify-center bg-[#536F86]">
+        <div class="container max-w-[1220px] flex flex-row items-center justify-center gap-10">
+
+            <p class="flex justify-center items-center text-white">
+                © 2025 Chrome Condos. All Rights Reserved.
+            </p>
+
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
